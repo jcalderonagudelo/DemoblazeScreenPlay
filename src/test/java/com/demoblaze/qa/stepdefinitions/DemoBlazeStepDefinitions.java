@@ -8,7 +8,10 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
+import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.Switch;
 import net.thucydides.core.annotations.Managed;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 
 public class DemoBlazeStepDefinitions {
@@ -30,6 +33,10 @@ public class DemoBlazeStepDefinitions {
 
         juan.wasAbleTo(OpenBrowser.on());
         juan.wasAbleTo(GoTo.Categories());
+        juan.wasAbleTo(Switch.toAlert());
+
+
+
 
     }
 
