@@ -1,12 +1,13 @@
 defaultTasks 'clena', 'test', 'aggregate'
 repositories {
     mavenCentral()
-
+    jcenter()
 }
 buildscript{
     repositories{
         mavenCentral()
-        
+        jcenter()
+
     }
     dependencies{
         classpath("net.serenity-bdd:serenity-gradle-plugin:2.1.0")
