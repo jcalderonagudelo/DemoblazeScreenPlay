@@ -1,25 +1,32 @@
 package com.demoblaze.qa.stepdefinitions;
 
-import com.demoblaze.qa.taks.GoTo;
-import com.demoblaze.qa.taks.OpenBrowser;
+import com.demoblaze.qa.models.PayOrderData;
+import com.demoblaze.qa.taks.*;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.Switch;
+
 import net.thucydides.core.annotations.Managed;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 public class DemoBlazeStepDefinitions {
 
     @Managed(driver = "chrome")
     private WebDriver hisBrower;
 
+
+
     private Actor juan = Actor.named("Juan");
+    private Object PayOrderData;
 
     @Before
     public void setUp(){
@@ -27,28 +34,28 @@ public class DemoBlazeStepDefinitions {
     }
 
 
-    @Given("^I want to search a electronic component$")
-    public void i_want_to_search_a_electronic_component() {
+    @Given("^I want to search an electronic component$")
+    public void iWantToSearchAnElectronicComponent() throws InterruptedException{
         // Write code here that turns the phrase above into concrete actions
 
         juan.wasAbleTo(OpenBrowser.on());
         juan.wasAbleTo(GoTo.Categories());
-        juan.wasAbleTo(Switch.toAlert());
-
-
-
-
+        WebDriverWait wait = new WebDriverWait(hisBrower,30);
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        alert.accept();
     }
 
 
-    @When("^I add a electronic component to cart$")
-    public void i_add_a_electronic_component_to_cart() {
+    @When("^I add an electronic component to cart$")
+    public void iAddAnElectronicComponentToCart(List <PayOrderData> dataList) {
         // Write code here that turns the phrase above into concrete actions
+        juan.attemptsTo(GoToCart.toPay());
+        juan.attemptsTo(Register.payOrder(dataList.get(0)));
 
     }
 
     @Then("^I should see my data on pay order$")
-    public void i_should_see_my_data_on_pay_order() {
+    public void iShouldSeeMyDataOnPayOrder() {
         // Write code here that turns the phrase above into concrete actions
 
     }
