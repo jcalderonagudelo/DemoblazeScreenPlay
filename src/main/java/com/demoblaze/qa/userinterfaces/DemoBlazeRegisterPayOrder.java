@@ -1,9 +1,10 @@
 package com.demoblaze.qa.userinterfaces;
 
 import net.serenitybdd.core.annotations.findby.By;
+import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
 
-public class DemoBlazeRegisterPayOrder {
+public class DemoBlazeRegisterPayOrder extends PageObject {
 
     public static Target NAME = Target.the("Name")
             .located(By.id("name"));
@@ -17,5 +18,8 @@ public class DemoBlazeRegisterPayOrder {
             .located(By.id("month"));
     public static Target YEAR = Target.the("Year")
             .located(By.id("year"));
+
+    public static Target BTNPURCHASE = Target.the("BUTTON PURCHASE")
+            .located(By.xpath("//button[@onclick='purchaseOrder()']"));
 
 }

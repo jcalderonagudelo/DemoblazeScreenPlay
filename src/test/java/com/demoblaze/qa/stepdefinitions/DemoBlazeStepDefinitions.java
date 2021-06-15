@@ -2,6 +2,7 @@ package com.demoblaze.qa.stepdefinitions;
 
 import com.demoblaze.qa.models.PayOrderData;
 import com.demoblaze.qa.taks.*;
+import com.demoblaze.qa.userinterfaces.DemoBlazeRegisterPayOrder;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -18,6 +19,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+
 public class DemoBlazeStepDefinitions {
 
     @Managed(driver = "chrome")
@@ -26,7 +29,7 @@ public class DemoBlazeStepDefinitions {
 
 
     private Actor juan = Actor.named("Juan");
-    private Object PayOrderData;
+    private DemoBlazeRegisterPayOrder page;
 
     @Before
     public void setUp(){
@@ -47,16 +50,18 @@ public class DemoBlazeStepDefinitions {
 
 
     @When("^I add an electronic component to cart$")
-    public void iAddAnElectronicComponentToCart(List <PayOrderData> dataList) {
+    public void iAddAnElectronicComponentToCart(List <PayOrderData> data) {
         // Write code here that turns the phrase above into concrete actions
         juan.attemptsTo(GoToCart.toPay());
-        juan.attemptsTo(Register.payOrder(dataList.get(0)));
+        juan.attemptsTo(Register.payOrder(data));
+
 
     }
 
     @Then("^I should see my data on pay order$")
     public void iShouldSeeMyDataOnPayOrder() {
         // Write code here that turns the phrase above into concrete actions
+        //juan.should(seeThat());
 
     }
 
