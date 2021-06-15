@@ -1,0 +1,24 @@
+com/demoblaze/qa/userinterfaces/DemoBlazeRegisterPayOrder.java
+ com.demoblaze.qa.userinterfaces.DemoBlazeRegisterPayOrder
+com/demoblaze/qa/userinterfaces/DemoBlazeHomePage.java
+ com.demoblaze.qa.userinterfaces.DemoBlazeHomePage
+com/demoblaze/qa/userinterfaces/DemoBlazeCart.java
+ com.demoblaze.qa.userinterfaces.DemoBlazeCart
+com/demoblaze/qa/taks/SwitchAlert.java
+ com.demoblaze.qa.taks.SwitchAlert
+com/demoblaze/qa/taks/Register.java
+ com.demoblaze.qa.taks.Register
+com/demoblaze/qa/taks/OpenBrowser.java
+ com.demoblaze.qa.taks.OpenBrowser
+com/demoblaze/qa/taks/GoToCart.java
+ com.demoblaze.qa.taks.GoToCart
+com/demoblaze/qa/models/PayOrderData.java
+ com.demoblaze.qa.models.PayOrderData
+com/demoblaze/qa/questions/Purchase.java
+ com.demoblaze.qa.questions.Purchase
+com/demoblaze/qa/userinterfaces/DemoBlazePurchasePage.java
+ com.demoblaze.qa.userinterfaces.DemoBlazePurchasePage
+com/demoblaze/qa/taks/GoTo.java
+ com.demoblaze.qa.taks.GoTo
+com/demoblaze/qa/userinterfaces/DemoBlazeCategories.java
+ com.demoblaze.qa.userinterfaces.DemoBlazeCategories
