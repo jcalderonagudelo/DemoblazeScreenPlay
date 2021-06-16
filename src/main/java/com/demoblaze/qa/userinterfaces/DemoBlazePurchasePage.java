@@ -6,5 +6,5 @@ import net.serenitybdd.screenplay.targets.Target;
 public class DemoBlazePurchasePage {
 
     public static final Target NAME = Target.the("Name Purchaser")
-            .located(By.xpath("//p/text()[4]"));
+            .located(By.xpath("//p[@class='lead text-muted ']"));
 }
