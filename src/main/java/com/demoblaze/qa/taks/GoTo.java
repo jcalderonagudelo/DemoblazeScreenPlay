@@ -1,5 +1,6 @@
 package com.demoblaze.qa.taks;
 
+import com.demoblaze.qa.exceptions.NotFindCategories;
 import com.demoblaze.qa.userinterfaces.DemoBlazeCategories;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -19,7 +20,9 @@ public class GoTo implements Task {
     actor.attemptsTo(Click.on(DemoBlazeCategories.CELLPHONE));
     actor.attemptsTo(Click.on(DemoBlazeCategories.ADDCART));
 
+    }
 
-
+    public String getNoFindCategoriesMessage(){
+        return String.format(NotFindCategories.getNoFindCategoriesMessage());
     }
 }

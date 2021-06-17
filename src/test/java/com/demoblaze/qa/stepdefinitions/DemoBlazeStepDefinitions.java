@@ -2,6 +2,7 @@ package com.demoblaze.qa.stepdefinitions;
 
 import com.demoblaze.qa.models.LogInData;
 import com.demoblaze.qa.models.PayOrderData;
+import com.demoblaze.qa.questions.IsCorrectComponent;
 import com.demoblaze.qa.questions.Purchase;
 import com.demoblaze.qa.taks.*;
 import cucumber.api.java.Before;
@@ -66,14 +67,17 @@ public class DemoBlazeStepDefinitions {
     @When("^I add an electronic component to cart$")
     public void iAddAnElectronicComponentToCart(List <PayOrderData> data) {
         juan.attemptsTo(GoToCart.toPay());
+        juan.should(seeThat(IsCorrectComponent.choosed()));
         juan.attemptsTo(Register.payOrder(data));
     }
 
     @Then("^I should see my data on pay order$")
-    public void iShouldSeeMyDataOnPayOrder(List<PayOrderData> payOrderData) {
-        juan.should(seeThat(Purchase.withTarget(payOrderData)));
+    public void iShouldSeeMyDataOnPayOrder() {
+        juan.should(seeThat(Purchase.isVisible()));
 
     }
+
+
 
 
 }

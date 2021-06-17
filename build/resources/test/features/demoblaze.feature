@@ -15,8 +15,7 @@ Feature: Purchasing an electronic component
       | name   | country  | city     | creditCard          | month   | year |
       | JuanMa | Colombia | Medellin | 1234 5678 9876 5432 | February | 2029 |
     Then I should see my data on pay order
-      | name         |
-      | Name: JuanMa |
+
 
 
 
