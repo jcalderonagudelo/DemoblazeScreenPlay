@@ -26,34 +26,23 @@ public class DemoBlazeStepDefinitions {
 
     @Managed(driver = "chrome")
     private  WebDriver hisBrowser;
-
-
     private final Actor juan = Actor.named("Juan");
-
 
     @Before
     public void setUp(){
-
         juan.can(BrowseTheWeb.with(hisBrowser));
         hisBrowser.manage().window().maximize();
-
-
     }
-
 
     @Given("^I am on demoblaze website$")
     public void iAmOnDemoblazeWebsite() {
-        // Write code here that turns the phrase above into concrete actions
         juan.wasAbleTo(OpenBrowser.on());
     }
-
 
     @When("^I login on page with the credentials$")
     public void iLoginOnPageWithTheCredentials( List<LogInData> logInData) {
         juan.attemptsTo(LogIn.onPage(logInData));
-
     }
-
 
     @Given("^I want to search an electronic component$")
     public void iWantToSearchAnElectronicComponent() {
@@ -62,7 +51,6 @@ public class DemoBlazeStepDefinitions {
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
         alert.accept();
     }
-
 
     @When("^I add an electronic component to cart$")
     public void iAddAnElectronicComponentToCart(List <PayOrderData> data) {
@@ -74,10 +62,5 @@ public class DemoBlazeStepDefinitions {
     @Then("^I should see my data on pay order$")
     public void iShouldSeeMyDataOnPayOrder() {
         juan.should(seeThat(Purchase.isVisible()));
-
     }
-
-
-
-
 }
