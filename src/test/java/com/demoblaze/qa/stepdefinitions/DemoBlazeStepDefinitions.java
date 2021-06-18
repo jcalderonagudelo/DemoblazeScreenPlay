@@ -15,17 +15,19 @@ import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 
 import net.thucydides.core.annotations.Managed;
 
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import java.util.List;
 
 public class DemoBlazeStepDefinitions {
 
     @Managed(driver = "chrome")
-    private  WebDriver hisBrowser;
+    public WebDriver hisBrowser;
     private final Actor juan = Actor.named("Juan");
 
     @Before

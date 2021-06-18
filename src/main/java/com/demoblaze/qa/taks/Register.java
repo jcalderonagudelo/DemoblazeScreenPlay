@@ -19,9 +19,7 @@ public class Register implements Task {
     public Register(List<PayOrderData> payOrderData)
     {
         this.payOrderData = payOrderData;
-
     }
-
 
     @Override
     public <T extends Actor> void performAs(T actor) {
@@ -32,7 +30,6 @@ public class Register implements Task {
         actor.attemptsTo(Enter.theValue(payOrderData.get(0).getMonth()).into(MONTH));
         actor.attemptsTo(Enter.theValue(payOrderData.get(0).getYear()).into(YEAR));
         actor.attemptsTo(Click.on(BTNPURCHASE));
-
     }
 
     public static Register payOrder(List<PayOrderData> payOrderData )

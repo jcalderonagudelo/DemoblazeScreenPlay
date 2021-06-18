@@ -1,1 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Purchasing an electronic component" skipped="0" tests="1" time="66.51" timestamp="2021-06-16 08:06:58"><testcase name="Buy an electronic component on demoblaze website"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Purchasing an electronic component" skipped="0" tests="1" time="11.46" timestamp="2021-06-18 01:05:30"><testcase name="Buy an electronic component on demoblaze website"><error message="net.serenitybdd.screenplay.targets.ByTarget cannot be cast to org.openqa.selenium.WebElement" type="java.lang.ClassCastException">net.serenitybdd.screenplay.targets.ByTarget cannot be cast to org.openqa.selenium.WebElement</error><system-err>net.serenitybdd.screenplay.targets.ByTarget cannot be cast to org.openqa.selenium.WebElement&#13;
+com.demoblaze.qa.taks.GoTo.performAs(GoTo.java:30)&#13;
+com.demoblaze.qa.stepdefinitions.DemoBlazeStepDefinitions.iWantToSearchAnElectronicComponent(DemoBlazeStepDefinitions.java:51)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+</system-err></testcase></testsuite>

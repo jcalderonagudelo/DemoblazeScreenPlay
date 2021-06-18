@@ -7,6 +7,8 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 
 public class GoToCart implements Task {
+
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Click.on(DemoBlazeCart.CART));

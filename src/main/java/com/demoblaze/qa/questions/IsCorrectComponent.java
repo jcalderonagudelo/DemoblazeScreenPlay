@@ -9,7 +9,6 @@ public class IsCorrectComponent implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor) {
         return WebElementQuestion.the(TBODYID).answeredBy(actor).containsText("Iphone 6 32gb");
-
     }
     public static Question<Boolean> choosed(){
         return new IsCorrectComponent();
