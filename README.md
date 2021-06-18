@@ -480,4 +480,5 @@ Al finalizar la ejecución debemos ingresar a la siguiente ruta y abrir el archi
 El reporte generado al momento de subir este repositorio se puede 
 visualizar en html básico en el siguiente link [Reporte Serenity](https://htmlpreview.github.io/?https://github.com/jcalderonagudelo/DemoblazeScreenPlay/blob/master/target/site/serenity/index.html)
 
+## Version Chrome
 Versión del Google Chrome al momento de ejecutar el proyecto y descargar el chromedriver.exe `Versión 91.0.4472.114 (Build oficial) (64 bits)`
