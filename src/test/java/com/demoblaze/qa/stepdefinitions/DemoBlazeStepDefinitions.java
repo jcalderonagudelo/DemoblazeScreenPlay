@@ -11,16 +11,13 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 
+import net.serenitybdd.screenplay.actions.Switch;
 import net.thucydides.core.annotations.Managed;
 
-
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 
 import java.util.List;
 
@@ -49,9 +46,8 @@ public class DemoBlazeStepDefinitions {
     @Given("^I want to search an electronic component$")
     public void iWantToSearchAnElectronicComponent() {
         juan.wasAbleTo(GoTo.Categories());
-        WebDriverWait wait = new WebDriverWait(hisBrowser,30);
-        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-        alert.accept();
+        juan.wasAbleTo(Switch.toAlert());
+
     }
 
     @When("^I add an electronic component to cart$")

@@ -24,6 +24,8 @@ com/demoblaze/qa/taks/LogIn.java
  com.demoblaze.qa.taks.LogIn
 com/demoblaze/qa/models/LogInData.java
  com.demoblaze.qa.models.LogInData
+com/demoblaze/qa/questions/NotFindCategories.java
+ com.demoblaze.qa.questions.NotFindCategories
 com/demoblaze/qa/taks/GoToCart.java
  com.demoblaze.qa.taks.GoToCart
 com/demoblaze/qa/taks/Register.java
